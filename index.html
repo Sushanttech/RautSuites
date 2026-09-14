@@ -8,16 +8,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #E7E9E2;
-    --paper-deep: #DBDECF;
-    --ink: #131E1B;
-    --ink-soft: #48544D;
-    --lake: #215952;
-    --lake-deep: #132F2B;
-    --brass: #C99A2E;
-    --brass-soft: #E3B94C;
-    --line: rgba(19,30,27,0.15);
-    --radius: 2px;
+    --paper: #F9F8F3;
+    --paper-deep: #EFECE4;
+    --card-bg: #FFFFFF;
+    --ink: #0F1715;
+    --ink-soft: #424E48;
+    --lake: #1E4D45;
+    --lake-deep: #0B201D;
+    --brass: #B5821B;
+    --brass-soft: #D8A232;
+    --line: rgba(15,23,21,0.12);
+    --radius: 4px;
+    --shadow: 0 2px 12px rgba(0,0,0,0.04);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; overflow-x: hidden; }
@@ -44,24 +46,27 @@
   /* NAV & MOBILE DROPDOWN */
   header {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(238,234,224,0.95);
-    backdrop-filter: blur(6px);
+    background: rgba(249, 248, 243, 0.95);
+    backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line);
   }
   nav {
     display: flex; align-items: center; justify-content: space-between;
     padding: 16px 0; position: relative;
   }
-  .brand { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; }
+  .brand { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600; color: var(--lake-deep); }
   .brand span { color: var(--brass); }
 
   .navlinks { display: flex; gap: 24px; font-size: 0.92rem; color: var(--ink-soft); align-items: center; }
-  .navlinks a:hover { color: var(--lake-deep); }
+  .navlinks a { transition: color 0.2s ease; }
+  .navlinks a:hover { color: var(--brass); }
 
   .navcta {
-    background: var(--lake-deep); color: var(--paper); padding: 10px 20px;
+    background: var(--lake-deep); color: #FFFFFF !important; padding: 10px 20px;
     font-size: 0.88rem; font-weight: 600; border-radius: var(--radius);
+    transition: background 0.2s ease;
   }
+  .navcta:hover { background: var(--lake); }
 
   /* Hamburger Toggle */
   .menu-toggle {
@@ -84,13 +89,13 @@
       top: 100%;
       left: 0;
       right: 0;
-      background: rgba(238,234,224,0.98);
+      background: var(--paper);
       backdrop-filter: blur(8px);
       padding: 20px 24px;
       border-bottom: 1px solid var(--line);
       gap: 16px;
       align-items: flex-start;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .navlinks.active { display: flex; }
@@ -114,9 +119,9 @@
   }
   .eyebrow {
     display: inline-flex; align-items: center; gap: 10px;
-    color: var(--brass); font-size: 0.85rem; font-weight: 600; margin-bottom: 22px;
+    color: var(--brass); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 22px;
   }
-  .eyebrow::before { content: ""; width: 26px; height: 1px; background: var(--brass); }
+  .eyebrow::before { content: ""; width: 26px; height: 1.5px; background: var(--brass); }
   .hero-brand {
     font-family: 'Fraunces', serif;
     font-size: clamp(2.8rem, 6vw, 4.4rem);
@@ -139,25 +144,27 @@
   }
   .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
   .btn-primary {
-    background: var(--lake-deep); color: var(--paper); padding: 14px 26px;
+    background: var(--lake-deep); color: #FFFFFF; padding: 14px 26px;
+    font-weight: 600; font-size: 0.95rem; border-radius: var(--radius);
+    transition: background .2s ease, transform .1s ease;
+  }
+  .btn-primary:hover { background: var(--lake); }
+  .btn-ghost {
+    border: 1.5px solid var(--lake-deep); color: var(--lake-deep); padding: 14px 26px;
     font-weight: 600; font-size: 0.95rem; border-radius: var(--radius);
     transition: background .2s ease;
   }
-  .btn-primary:hover { background: var(--ink); }
-  .btn-ghost {
-    border: 1px solid var(--ink); color: var(--ink); padding: 14px 26px;
-    font-weight: 600; font-size: 0.95rem; border-radius: var(--radius);
-  }
+  .btn-ghost:hover { background: rgba(11,32,29,0.05); }
   .hero-stats { display: flex; gap: 38px; flex-wrap: wrap; }
   .hero-stats div strong {
     display: block; font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--lake-deep);
   }
   .hero-stats div span { font-size: 0.82rem; color: var(--ink-soft); }
 
-  .hero-art { position: relative; }
+  .hero-art { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
   .hero-art svg { width: 100%; height: auto; }
 
-  /* SECTION HEADS (CENTERED) */
+  /* SECTION HEADS */
   .section { padding: 88px 0; }
   .section.tight { padding: 64px 0; }
   .section-head {
@@ -167,7 +174,7 @@
     margin-bottom: 48px;
     text-align: center;
   }
-  .section-head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 14px; }
+  .section-head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 14px; color: var(--lake-deep); }
   .section-head p { color: var(--ink-soft); font-size: 1.02rem; }
   .alt { background: var(--paper-deep); }
 
@@ -176,12 +183,13 @@
   .gallery figure {
     grid-column: span 2; border-radius: var(--radius); overflow: hidden;
     background: var(--lake-deep); position: relative; aspect-ratio: 4/3;
+    box-shadow: var(--shadow);
   }
   .gallery figure:first-child { grid-column: span 4; aspect-ratio: 16/8; }
   .gallery figcaption {
     position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 18px;
-    color: var(--paper); font-size: 0.85rem; font-weight: 600;
-    background: linear-gradient(to top, rgba(20,30,27,0.75), transparent);
+    color: #FFFFFF; font-size: 0.85rem; font-weight: 600;
+    background: linear-gradient(to top, rgba(11,32,29,0.9), transparent);
   }
   @media (max-width: 760px) {
     .gallery { grid-template-columns: repeat(2,1fr); }
@@ -190,11 +198,11 @@
   }
 
   /* AMENITIES / LOCATION */
-  .loc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-  .loc-card { background: var(--paper); padding: 30px 26px; }
-  .loc-card .icon { width: 34px; height: 34px; margin-bottom: 18px; color: var(--lake-deep); }
-  .loc-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
-  .loc-card .dist { color: var(--brass); font-weight: 700; font-size: 0.9rem; margin-bottom: 10px; }
+  .loc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .loc-card { background: var(--card-bg); padding: 30px 26px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .loc-card .icon { width: 34px; height: 34px; margin-bottom: 18px; color: var(--lake); }
+  .loc-card h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--lake-deep); }
+  .loc-card .dist { color: var(--brass); font-weight: 700; font-size: 0.88rem; margin-bottom: 10px; }
   .loc-card p { color: var(--ink-soft); font-size: 0.9rem; }
   @media (max-width: 860px) { .loc-grid { grid-template-columns: repeat(2,1fr); } }
   @media (max-width: 560px) { .loc-grid { grid-template-columns: 1fr; } }
@@ -202,29 +210,35 @@
   /* MAP STRIP */
   .map-embed {
     border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line);
-    margin-top: 32px; filter: grayscale(0.15) contrast(1.02); width: 100%;
+    margin-top: 32px; filter: grayscale(0.15) contrast(1.02); width: 100%; box-shadow: var(--shadow);
   }
   .map-embed iframe { display: block; width: 100%; }
   .map-strip {
     display: flex; align-items: center; gap: 18px; padding: 22px 26px;
-    background: var(--lake-deep); color: var(--paper); border-radius: var(--radius);
-    margin-top: 32px; font-size: 0.92rem; flex-wrap: wrap; justify-content: center;
+    background: var(--lake-deep); color: #FFFFFF; border-radius: var(--radius);
+    margin-top: 24px; font-size: 0.92rem; flex-wrap: wrap; justify-content: center;
   }
   .map-strip strong { color: var(--brass-soft); }
 
-  /* INQUIRY FORM (CENTERED) */
+  /* INQUIRY FORM */
   .inquiry-form {
     max-width: 640px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background: var(--card-bg);
+    padding: 36px;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
   }
+  @media (max-width: 640px) { .inquiry-form { padding: 24px 18px; } }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
   @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
   .inquiry-form label {
     display: flex; flex-direction: column; gap: 8px; text-align: left;
-    font-size: 0.85rem; font-weight: 600; color: var(--ink-soft);
+    font-size: 0.85rem; font-weight: 600; color: var(--ink);
   }
   .inquiry-form label.full { width: 100%; }
   .inquiry-form input, .inquiry-form textarea {
@@ -233,47 +247,48 @@
     padding: 12px 14px; resize: vertical;
   }
   .inquiry-form input:focus, .inquiry-form textarea:focus {
-    outline: 2px solid var(--lake-deep); outline-offset: 1px;
+    outline: 2px solid var(--lake); outline-offset: 1px; background: #FFFFFF;
   }
   .inquiry-form .btn-primary {
     align-self: center;
     border: none;
     cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
   }
 
   /* VIEWS */
   .views { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
   @media (max-width: 760px) { .views { grid-template-columns: 1fr; } }
-  .view-card { background: var(--paper); border: 1px solid var(--line); padding: 26px; border-radius: var(--radius); }
-  .view-card svg { margin-bottom: 16px; }
-  .view-card h3 { font-size: 1.02rem; margin-bottom: 8px; }
+  .view-card { background: var(--card-bg); border: 1px solid var(--line); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); }
+  .view-card h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--lake-deep); }
   .view-card p { color: var(--ink-soft); font-size: 0.9rem; }
 
   /* CONTACT */
   .contact-grid {
-    display: grid; grid-template-columns: repeat(3,1fr); gap: 1px;
-    background: var(--line); border: 1px solid var(--line); margin-bottom: 40px;
+    display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 40px;
   }
-  .contact-card { background: var(--paper); padding: 30px 26px; }
-  .contact-card .icon { width: 30px; height: 30px; margin-bottom: 16px; color: var(--lake-deep); }
-  .contact-card h3 { font-size: 1.0rem; margin-bottom: 10px; }
+  .contact-card { background: var(--card-bg); padding: 30px 26px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
+  .contact-card .icon { width: 30px; height: 30px; margin-bottom: 16px; color: var(--lake); }
+  .contact-card h3 { font-size: 1.0rem; margin-bottom: 10px; color: var(--lake-deep); }
   .contact-card p { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
-  .contact-card a { color: var(--lake-deep); font-weight: 600; }
-  .contact-card a:hover { text-decoration: underline; }
+  .contact-card a { color: var(--lake); font-weight: 600; }
+  .contact-card a:hover { text-decoration: underline; color: var(--brass); }
   @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
 
   /* CTA */
   .cta {
-    background: var(--lake-deep); color: var(--paper); border-radius: var(--radius);
+    background: var(--lake-deep); color: #FFFFFF; border-radius: var(--radius);
     padding: 56px 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
+    box-shadow: 0 8px 30px rgba(11,32,29,0.15);
   }
   @media (max-width: 760px) { .cta { text-align: center; justify-content: center; padding: 36px 24px; } }
-  .cta h2 { color: var(--paper); font-size: clamp(1.6rem,3vw,2.1rem); max-width: 16ch; }
-  .cta p { color: #C9D6D1; margin-top: 10px; max-width: 34ch; }
-  .cta .btn-primary { background: var(--brass); }
-  .cta .btn-primary:hover { background: var(--brass-soft); color: var(--lake-deep); }
+  .cta h2 { color: #FFFFFF; font-size: clamp(1.6rem,3vw,2.1rem); max-width: 16ch; }
+  .cta p { color: #D7E0DD; margin-top: 10px; max-width: 34ch; }
+  .cta .btn-primary { background: var(--brass); color: #FFFFFF; }
+  .cta .btn-primary:hover { background: var(--brass-soft); }
 
-  footer { padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.85rem; }
+  footer { padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.85rem; background: var(--paper); }
   footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
   @media (max-width: 640px) { footer .wrap { justify-content: center; text-align: center; } }
 </style>
@@ -317,28 +332,28 @@
     </div>
     <div class="hero-art">
       <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
-        <rect width="560" height="460" fill="#DBDECF"/>
-        <rect width="560" height="260" fill="#D7DED2"/>
-        <rect y="260" width="560" height="200" fill="#215952"/>
-        <rect y="260" width="560" height="6" fill="#132F2B"/>
-        <g opacity="0.25" stroke="#E7E9E2" stroke-width="3">
+        <rect width="560" height="460" fill="#EFECE4"/>
+        <rect width="560" height="260" fill="#E2E7E1"/>
+        <rect y="260" width="560" height="200" fill="#1E4D45"/>
+        <rect y="260" width="560" height="6" fill="#0B201D"/>
+        <g opacity="0.25" stroke="#F9F8F3" stroke-width="3">
           <line x1="90" y1="300" x2="90" y2="340"/>
           <line x1="150" y1="310" x2="150" y2="360"/>
           <line x1="260" y1="300" x2="260" y2="350"/>
           <line x1="420" y1="310" x2="420" y2="355"/>
         </g>
         <g>
-          <rect x="60" y="140" width="46" height="120" fill="#131E1B"/>
-          <rect x="112" y="100" width="38" height="160" fill="#1D3833"/>
-          <rect x="156" y="160" width="30" height="100" fill="#131E1B"/>
-          <rect x="230" y="80" width="52" height="180" fill="#132F2B"/>
-          <rect x="290" y="130" width="36" height="130" fill="#1D3833"/>
-          <rect x="334" y="110" width="42" height="150" fill="#131E1B"/>
-          <rect x="384" y="150" width="30" height="110" fill="#1D3833"/>
-          <rect x="420" y="95" width="48" height="165" fill="#132F2B"/>
-          <rect x="474" y="150" width="34" height="110" fill="#131E1B"/>
+          <rect x="60" y="140" width="46" height="120" fill="#0F1715"/>
+          <rect x="112" y="100" width="38" height="160" fill="#122E29"/>
+          <rect x="156" y="160" width="30" height="100" fill="#0F1715"/>
+          <rect x="230" y="80" width="52" height="180" fill="#0B201D"/>
+          <rect x="290" y="130" width="36" height="130" fill="#122E29"/>
+          <rect x="334" y="110" width="42" height="150" fill="#0F1715"/>
+          <rect x="384" y="150" width="30" height="110" fill="#122E29"/>
+          <rect x="420" y="95" width="48" height="165" fill="#0B201D"/>
+          <rect x="474" y="150" width="34" height="110" fill="#0F1715"/>
         </g>
-        <g fill="#E3B94C" opacity="0.85">
+        <g fill="#D8A232" opacity="0.85">
           <rect x="240" y="95" width="6" height="8"/><rect x="252" y="95" width="6" height="8"/>
           <rect x="264" y="95" width="6" height="8"/><rect x="240" y="115" width="6" height="8"/>
           <rect x="252" y="115" width="6" height="8"/><rect x="264" y="115" width="6" height="8"/>
@@ -347,12 +362,12 @@
           <rect x="454" y="112" width="6" height="8"/><rect x="430" y="132" width="6" height="8"/>
           <rect x="442" y="132" width="6" height="8"/><rect x="454" y="132" width="6" height="8"/>
         </g>
-        <g fill="#48544D">
+        <g fill="#424E48">
           <circle cx="30" cy="255" r="20"/>
           <circle cx="500" cy="255" r="26"/>
           <circle cx="530" cy="250" r="16"/>
         </g>
-        <g stroke="#131E1B" stroke-width="2" fill="none" opacity="0.6">
+        <g stroke="#0F1715" stroke-width="2" fill="none" opacity="0.6">
           <path d="M400 50 q6 -8 12 0 q6 -8 12 0"/>
           <path d="M440 70 q5 -7 10 0 q5 -7 10 0"/>
         </g>
@@ -370,43 +385,43 @@
     <div class="gallery">
       <figure>
         <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
-          <rect width="800" height="400" fill="#D3D6C4"/>
-          <rect x="0" y="260" width="800" height="140" fill="#B9BFA6"/>
-          <rect x="60" y="80" width="220" height="160" fill="#E7E9E2" stroke="#131E1B" stroke-width="3"/>
-          <rect x="90" y="110" width="60" height="90" fill="#215952" opacity="0.5"/>
-          <rect x="170" y="110" width="60" height="90" fill="#215952" opacity="0.3"/>
-          <rect x="340" y="150" width="180" height="110" fill="#C99A2E" opacity="0.85"/>
-          <rect x="360" y="150" width="140" height="10" fill="#131E1B" opacity="0.4"/>
-          <circle cx="620" cy="150" r="50" fill="#E7E9E2" opacity="0.6"/>
+          <rect width="800" height="400" fill="#E2E7E1"/>
+          <rect x="0" y="260" width="800" height="140" fill="#CBD5C9"/>
+          <rect x="60" y="80" width="220" height="160" fill="#F9F8F3" stroke="#0F1715" stroke-width="3"/>
+          <rect x="90" y="110" width="60" height="90" fill="#1E4D45" opacity="0.5"/>
+          <rect x="170" y="110" width="60" height="90" fill="#1E4D45" opacity="0.3"/>
+          <rect x="340" y="150" width="180" height="110" fill="#B5821B" opacity="0.85"/>
+          <rect x="360" y="150" width="140" height="10" fill="#0F1715" opacity="0.4"/>
+          <circle cx="620" cy="150" r="50" fill="#F9F8F3" opacity="0.6"/>
         </svg>
         <figcaption>Living &amp; dining — open layout, lake-facing window</figcaption>
       </figure>
       <figure>
         <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="300" fill="#1D3833"/>
-          <rect x="40" y="60" width="320" height="180" fill="#132F2B"/>
-          <rect x="60" y="90" width="120" height="120" fill="#E3B94C" opacity="0.8"/>
-          <rect x="220" y="90" width="120" height="60" fill="#E7E9E2" opacity="0.6"/>
+          <rect width="400" height="300" fill="#122E29"/>
+          <rect x="40" y="60" width="320" height="180" fill="#0B201D"/>
+          <rect x="60" y="90" width="120" height="120" fill="#D8A232" opacity="0.8"/>
+          <rect x="220" y="90" width="120" height="60" fill="#F9F8F3" opacity="0.6"/>
         </svg>
         <figcaption>Bedroom — fitted wardrobe</figcaption>
       </figure>
       <figure>
         <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="300" fill="#E7E9E2"/>
-          <rect x="0" y="0" width="400" height="140" fill="#D7DED2"/>
-          <rect x="60" y="140" width="280" height="12" fill="#131E1B"/>
-          <rect x="70" y="152" width="80" height="90" fill="#C99A2E"/>
-          <rect x="170" y="152" width="80" height="90" fill="#E3B94C"/>
-          <rect x="270" y="152" width="70" height="90" fill="#C99A2E" opacity="0.7"/>
+          <rect width="400" height="300" fill="#F9F8F3"/>
+          <rect x="0" y="0" width="400" height="140" fill="#E2E7E1"/>
+          <rect x="60" y="140" width="280" height="12" fill="#0F1715"/>
+          <rect x="70" y="152" width="80" height="90" fill="#B5821B"/>
+          <rect x="170" y="152" width="80" height="90" fill="#D8A232"/>
+          <rect x="270" y="152" width="70" height="90" fill="#B5821B" opacity="0.7"/>
         </svg>
         <figcaption>Kitchen — modular fittings</figcaption>
       </figure>
       <figure>
         <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="300" fill="#132F2B"/>
-          <rect x="0" y="200" width="400" height="100" fill="#215952"/>
-          <path d="M0 200 Q100 180 200 200 T400 200" stroke="#E7E9E2" stroke-width="3" fill="none" opacity="0.5"/>
-          <circle cx="330" cy="60" r="30" fill="#E3B94C"/>
+          <rect width="400" height="300" fill="#0B201D"/>
+          <rect x="0" y="200" width="400" height="100" fill="#1E4D45"/>
+          <path d="M0 200 Q100 180 200 200 T400 200" stroke="#F9F8F3" stroke-width="3" fill="none" opacity="0.5"/>
+          <circle cx="330" cy="60" r="30" fill="#D8A232"/>
         </svg>
         <figcaption>Balcony — Powai Lake view</figcaption>
       </figure>
@@ -514,17 +529,17 @@
     </div>
     <div class="views">
       <div class="view-card">
-        <img src="Images/powai-lake.png" alt="Sunset over Powai Lake" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <img src="Images/powai-lake.png" alt="Sunset over Powai Lake" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:4px; margin-bottom:16px;">
         <h3>Powai Lake</h3>
         <p>A 0.6 km walk to the promenade — the neighbourhood's evening ritual.</p>
       </div>
       <div class="view-card">
-        <img src="Images/iit-bombay.png" alt="IIT Bombay campus building surrounded by trees" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <img src="Images/iit-bombay.png" alt="IIT Bombay campus building surrounded by trees" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:4px; margin-bottom:16px;">
         <h3>IIT Bombay's green belt</h3>
         <p>Uninterrupted tree cover borders the campus, visible from upper floors.</p>
       </div>
       <div class="view-card">
-        <img src="Images/hiranandani-skyline.png" alt="Hiranandani Gardens skyline" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <img src="Images/hiranandani-skyline.png" alt="Hiranandani Gardens skyline" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:4px; margin-bottom:16px;">
         <h3>Hiranandani skyline</h3>
         <p>A low, planned skyline that keeps the neighbourhood walkable and open.</p>
       </div>
