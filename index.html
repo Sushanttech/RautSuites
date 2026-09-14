@@ -574,6 +574,16 @@
 </footer>
 
 <script>
+  // Disable automatic browser scroll restoration on refresh
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  // Ensure view resets to top left upon unloading/reloading
+  window.addEventListener('beforeunload', () => {
+    window.scrollTo(0, 0);
+  });
+
   function toggleMenu() {
     const navLinks = document.getElementById('navLinks');
     navLinks.classList.toggle('active');
