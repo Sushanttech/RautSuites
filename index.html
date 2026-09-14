@@ -41,25 +41,61 @@
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
   @media (max-width: 640px) { .wrap { padding: 0 20px; } }
 
-  /* NAV */
+  /* NAV & MOBILE DROPDOWN */
   header {
     position: sticky; top: 0; z-index: 50;
-    background: rgba(238,234,224,0.92);
+    background: rgba(238,234,224,0.95);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid var(--line);
   }
-  nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; flex-wrap: wrap; gap: 12px; }
+  nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0; position: relative;
+  }
   .brand { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; }
   .brand span { color: var(--brass); }
-  .navlinks { display: flex; gap: 24px; font-size: 0.92rem; color: var(--ink-soft); flex-wrap: wrap; }
+
+  .navlinks { display: flex; gap: 24px; font-size: 0.92rem; color: var(--ink-soft); align-items: center; }
   .navlinks a:hover { color: var(--lake-deep); }
+
   .navcta {
     background: var(--lake-deep); color: var(--paper); padding: 10px 20px;
     font-size: 0.88rem; font-weight: 600; border-radius: var(--radius);
   }
-  @media (max-width: 760px) {
-    nav { justify-content: center; text-align: center; }
-    .navlinks { justify-content: center; font-size: 0.85rem; width: 100%; margin-top: 4px; }
+
+  /* Hamburger Toggle */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--ink);
+  }
+  .menu-toggle svg { width: 24px; height: 24px; }
+
+  @media (max-width: 768px) {
+    .menu-toggle { display: block; }
+
+    .navlinks {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(238,234,224,0.98);
+      backdrop-filter: blur(8px);
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--line);
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .navlinks.active { display: flex; }
+    .navlinks a { font-size: 1rem; font-weight: 600; width: 100%; }
+    .navcta { margin-top: 8px; width: 100%; text-align: center; }
   }
 
   /* HERO */
@@ -247,13 +283,18 @@
 <header>
   <nav class="wrap">
     <div class="brand">Shruti <span>Properties</span></div>
-    <div class="navlinks">
-      <a href="#gallery">Gallery</a>
-      <a href="#location">Location</a>
-      <a href="#inquire">Inquire</a>
-      <a href="#contact">Contact</a>
+    <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    <div class="navlinks" id="navLinks">
+      <a href="#gallery" onclick="closeMenu()">Gallery</a>
+      <a href="#location" onclick="closeMenu()">Location</a>
+      <a href="#inquire" onclick="closeMenu()">Inquire</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+      <a href="#inquire" class="navcta" onclick="closeMenu()">Inquire Online</a>
     </div>
-    <a href="#inquire" class="navcta">Inquire Online</a>
   </nav>
 </header>
 
@@ -473,17 +514,17 @@
     </div>
     <div class="views">
       <div class="view-card">
-        <img src="Images/powai-lake.png" alt="Sunset over Powai Lake" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <img src="images/powai-lake.png" alt="Sunset over Powai Lake" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
         <h3>Powai Lake</h3>
         <p>A 0.6 km walk to the promenade — the neighbourhood's evening ritual.</p>
       </div>
       <div class="view-card">
-        <img src="Images/iit-bombay.png" alt="IIT Bombay campus building surrounded by trees" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <img src="images/iit-bombay.png" alt="IIT Bombay campus building surrounded by trees" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
         <h3>IIT Bombay's green belt</h3>
         <p>Uninterrupted tree cover borders the campus, visible from upper floors.</p>
       </div>
       <div class="view-card">
-        <img src="Images/hiranandani-skyline.png" alt="Hiranandani Gardens skyline" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <img src="images/hiranandani-skyline.png" alt="Hiranandani Gardens skyline" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
         <h3>Hiranandani skyline</h3>
         <p>A low, planned skyline that keeps the neighbourhood walkable and open.</p>
       </div>
@@ -531,6 +572,18 @@
     <span>© 2026 Shruti Properties</span>
   </div>
 </footer>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+
+  function closeMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.remove('active');
+  }
+</script>
 
 </body>
 </html>
