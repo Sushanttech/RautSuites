@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shruti Properties — 1BHK Homes for Rent in Powai, Mumbai</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#E7E9E2;
+    --paper-deep:#DBDECF;
+    --ink:#131E1B;
+    --ink-soft:#48544D;
+    --lake:#215952;
+    --lake-deep:#132F2B;
+    --brass:#C99A2E;
+    --brass-soft:#E3B94C;
+    --line: rgba(19,30,27,0.15);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Manrope', sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3, .display{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    color:var(--ink);
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  img,svg{display:block; max-width:100%;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(238,234,224,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{display:flex; align-items:center; justify-content:space-between; padding:20px 0;}
+  .brand{font-family:'Fraunces', serif; font-size:1.15rem; font-weight:600;}
+  .brand span{color:var(--brass);}
+  .navlinks{display:flex; gap:32px; font-size:0.92rem; color:var(--ink-soft);}
+  .navlinks a:hover{color:var(--lake-deep);}
+  .navcta{
+    background:var(--lake-deep); color:var(--paper); padding:10px 20px;
+    font-size:0.88rem; font-weight:600; border-radius:var(--radius);
+  }
+  @media (max-width:760px){ .navlinks{display:none;} }
+
+  /* HERO */
+  .hero{position:relative; overflow:hidden; padding-top:64px;}
+  .hero-grid{
+    display:grid; grid-template-columns: 1.05fr 0.95fr; gap:56px; align-items:center;
+    padding:56px 0 72px;
+  }
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr; padding:32px 0 40px; gap:36px;} }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    color:var(--brass); font-size:0.85rem; font-weight:600; margin-bottom:22px;
+  }
+  .eyebrow::before{content:""; width:26px; height:1px; background:var(--brass);}
+  .hero-brand{
+    font-family:'Fraunces', serif;
+    font-size:clamp(2.8rem, 6vw, 4.4rem);
+    font-weight:600;
+    line-height:0.95;
+    color:var(--lake-deep);
+    margin-bottom:20px;
+    letter-spacing:-0.02em;
+  }
+  .hero h1{
+    font-size:clamp(1.5rem, 2.6vw, 2rem);
+    font-weight:500;
+    line-height:1.25;
+    max-width:20ch;
+    color:var(--ink-soft);
+    margin-bottom:22px;
+  }
+  .hero p.lede{
+    font-size:1.08rem; color:var(--ink-soft); max-width:46ch; margin-bottom:30px;
+  }
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:36px;}
+  .btn-primary{
+    background:var(--lake-deep); color:var(--paper); padding:14px 26px;
+    font-weight:600; font-size:0.95rem; border-radius:var(--radius);
+    transition:background .2s ease;
+  }
+  .btn-primary:hover{background:var(--ink);}
+  .btn-ghost{
+    border:1px solid var(--ink); color:var(--ink); padding:14px 26px;
+    font-weight:600; font-size:0.95rem; border-radius:var(--radius);
+  }
+  .hero-stats{display:flex; gap:38px; flex-wrap:wrap;}
+  .hero-stats div strong{
+    display:block; font-family:'Fraunces',serif; font-size:1.6rem; color:var(--lake-deep);
+  }
+  .hero-stats div span{font-size:0.82rem; color:var(--ink-soft);}
+
+  .hero-art{position:relative;}
+  .hero-art svg{width:100%; height:auto;}
+
+  /* SECTION HEADS */
+  .section{padding:88px 0;}
+  .section.tight{padding:64px 0;}
+  .section-head{max-width:56ch; margin-bottom:48px;}
+  .section-head h2{font-size:clamp(1.7rem, 3vw, 2.3rem); margin-bottom:14px;}
+  .section-head p{color:var(--ink-soft); font-size:1.02rem;}
+  .alt{background:var(--paper-deep);}
+
+  /* GALLERY */
+  .gallery{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
+  }
+  .gallery figure{
+    grid-column:span 2; border-radius:var(--radius); overflow:hidden;
+    background:var(--lake-deep); position:relative; aspect-ratio:4/3;
+  }
+  .gallery figure:first-child{grid-column:span 4; aspect-ratio:16/8;}
+  .gallery figcaption{
+    position:absolute; bottom:0; left:0; right:0; padding:16px 18px;
+    color:var(--paper); font-size:0.85rem; font-weight:600;
+    background:linear-gradient(to top, rgba(20,30,27,0.75), transparent);
+  }
+  @media (max-width:760px){
+    .gallery{grid-template-columns:repeat(2,1fr);}
+    .gallery figure{grid-column:span 2;}
+    .gallery figure:first-child{grid-column:span 2;}
+  }
+
+  /* AMENITIES / LOCATION */
+  .loc-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .loc-card{background:var(--paper); padding:30px 26px;}
+  .loc-card .icon{width:34px; height:34px; margin-bottom:18px; color:var(--lake-deep);}
+  .loc-card h3{font-size:1.05rem; margin-bottom:6px;}
+  .loc-card .dist{color:var(--brass); font-weight:700; font-size:0.9rem; margin-bottom:10px;}
+  .loc-card p{color:var(--ink-soft); font-size:0.9rem;}
+  @media (max-width:860px){ .loc-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .loc-grid{grid-template-columns:1fr;} }
+
+  /* MAP STRIP */
+  .map-embed{
+    border-radius:var(--radius); overflow:hidden; border:1px solid var(--line);
+    margin-top:32px; filter:grayscale(0.15) contrast(1.02);
+  }
+  .map-embed iframe{display:block;}
+  .map-strip{
+    display:flex; align-items:center; gap:18px; padding:22px 26px;
+    background:var(--lake-deep); color:var(--paper); border-radius:var(--radius);
+    margin-top:32px; font-size:0.92rem; flex-wrap:wrap;
+  }
+  .map-strip strong{color:var(--brass-soft);}
+
+  /* INQUIRY FORM */
+  .inquiry-form{max-width:640px; display:flex; flex-direction:column; gap:20px;}
+  .form-row{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+  @media (max-width:640px){ .form-row{grid-template-columns:1fr;} }
+  .inquiry-form label{
+    display:flex; flex-direction:column; gap:8px;
+    font-size:0.85rem; font-weight:600; color:var(--ink-soft);
+  }
+  .inquiry-form label.full{width:100%;}
+  .inquiry-form input, .inquiry-form textarea{
+    font-family:'Manrope', sans-serif; font-size:0.95rem; color:var(--ink);
+    background:var(--paper); border:1px solid var(--line); border-radius:var(--radius);
+    padding:12px 14px; resize:vertical;
+  }
+  .inquiry-form input:focus, .inquiry-form textarea:focus{
+    outline:2px solid var(--lake-deep); outline-offset:1px;
+  }
+  .inquiry-form .btn-primary{align-self:flex-start; border:none; cursor:pointer;}
+
+  /* TESTIMONIAL / VIEWS */
+  .views{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media (max-width:760px){ .views{grid-template-columns:1fr;} }
+  .view-card{background:var(--paper); border:1px solid var(--line); padding:26px; border-radius:var(--radius);}
+  .view-card svg{margin-bottom:16px;}
+  .view-card h3{font-size:1.02rem; margin-bottom:8px;}
+  .view-card p{color:var(--ink-soft); font-size:0.9rem;}
+  .photo-credit{font-size:0.72rem; color:var(--ink-soft); opacity:0.65; margin-top:8px;}
+
+  /* CONTACT */
+  .contact-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line); margin-bottom:40px;
+  }
+  .contact-card{background:var(--paper); padding:30px 26px;}
+  .contact-card .icon{width:30px; height:30px; margin-bottom:16px; color:var(--lake-deep);}
+  .contact-card h3{font-size:1rem; margin-bottom:10px;}
+  .contact-card p{color:var(--ink-soft); font-size:0.92rem; line-height:1.6;}
+  .contact-card a{color:var(--lake-deep); font-weight:600;}
+  .contact-card a:hover{text-decoration:underline;}
+  @media (max-width:760px){ .contact-grid{grid-template-columns:1fr;} }
+
+  /* CTA */
+  .cta{
+    background:var(--lake-deep); color:var(--paper); border-radius:var(--radius);
+    padding:56px 48px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .cta h2{color:var(--paper); font-size:clamp(1.6rem,3vw,2.1rem); max-width:16ch;}
+  .cta p{color:#C9D6D1; margin-top:10px; max-width:34ch;}
+  .cta .btn-primary{background:var(--brass);}
+  .cta .btn-primary:hover{background:var(--brass-soft); color:var(--lake-deep);}
+
+  footer{padding:40px 0; border-top:1px solid var(--line); color:var(--ink-soft); font-size:0.85rem;}
+  footer .wrap{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">Shruti <span>Properties</span></div>
+    <div class="navlinks">
+      <a href="#gallery">Gallery</a>
+      <a href="#location">Location</a>
+      <a href="#inquire">Inquire</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#inquire" class="navcta">Inquire Online</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">POWAI, MUMBAI 400076</div>
+      <div class="hero-brand">Shruti Properties</div>
+      <h1>1BHK homes for rent on Main Street, steps from Powai's green heart</h1>
+      <p class="lede">A quiet residential address inside Mumbai's most self-sufficient neighbourhood — lakeside walks, IIT Bombay's tree cover, and every daily errand within a ten-minute walk.</p>
+      <div class="hero-actions">
+        <a href="#inquire" class="btn-primary">Book a Site Visit</a>
+        <a href="#inquire" class="btn-ghost">Inquire Online</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>1 BHK</strong><span>485–560 sq.ft carpet</span></div>
+        <div><strong>0.9 km</strong><span>to Cult Hiranandani Gardens</span></div>
+        <div><strong>1.3 km</strong><span>to Hiranandani Hospital</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
+        <rect width="560" height="460" fill="#DBDECF"/>
+        <!-- sky -->
+        <rect width="560" height="260" fill="#D7DED2"/>
+        <!-- lake -->
+        <rect y="260" width="560" height="200" fill="#215952"/>
+        <rect y="260" width="560" height="6" fill="#132F2B"/>
+        <!-- reflections -->
+        <g opacity="0.25" stroke="#E7E9E2" stroke-width="3">
+          <line x1="90" y1="300" x2="90" y2="340"/>
+          <line x1="150" y1="310" x2="150" y2="360"/>
+          <line x1="260" y1="300" x2="260" y2="350"/>
+          <line x1="420" y1="310" x2="420" y2="355"/>
+        </g>
+        <!-- skyline buildings -->
+        <g>
+          <rect x="60" y="140" width="46" height="120" fill="#131E1B"/>
+          <rect x="112" y="100" width="38" height="160" fill="#1D3833"/>
+          <rect x="156" y="160" width="30" height="100" fill="#131E1B"/>
+          <rect x="230" y="80" width="52" height="180" fill="#132F2B"/>
+          <rect x="290" y="130" width="36" height="130" fill="#1D3833"/>
+          <rect x="334" y="110" width="42" height="150" fill="#131E1B"/>
+          <rect x="384" y="150" width="30" height="110" fill="#1D3833"/>
+          <rect x="420" y="95" width="48" height="165" fill="#132F2B"/>
+          <rect x="474" y="150" width="34" height="110" fill="#131E1B"/>
+        </g>
+        <!-- windows -->
+        <g fill="#E3B94C" opacity="0.85">
+          <rect x="240" y="95" width="6" height="8"/><rect x="252" y="95" width="6" height="8"/>
+          <rect x="264" y="95" width="6" height="8"/><rect x="240" y="115" width="6" height="8"/>
+          <rect x="252" y="115" width="6" height="8"/><rect x="264" y="115" width="6" height="8"/>
+          <rect x="240" y="135" width="6" height="8"/><rect x="252" y="135" width="6" height="8"/>
+          <rect x="430" y="112" width="6" height="8"/><rect x="442" y="112" width="6" height="8"/>
+          <rect x="454" y="112" width="6" height="8"/><rect x="430" y="132" width="6" height="8"/>
+          <rect x="442" y="132" width="6" height="8"/><rect x="454" y="132" width="6" height="8"/>
+        </g>
+        <!-- trees -->
+        <g fill="#48544D">
+          <circle cx="30" cy="255" r="20"/>
+          <circle cx="500" cy="255" r="26"/>
+          <circle cx="530" cy="250" r="16"/>
+        </g>
+        <!-- birds -->
+        <g stroke="#131E1B" stroke-width="2" fill="none" opacity="0.6">
+          <path d="M400 50 q6 -8 12 0 q6 -8 12 0"/>
+          <path d="M440 70 q5 -7 10 0 q5 -7 10 0"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Inside the home</h2>
+      <p>Every 1BHK unit is built around daylight and cross-ventilation — the same lake breeze that runs through Powai's older Hiranandani blocks.</p>
+    </div>
+    <div class="gallery">
+      <figure>
+        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+          <rect width="800" height="400" fill="#D3D6C4"/>
+          <rect x="0" y="260" width="800" height="140" fill="#B9BFA6"/>
+          <rect x="60" y="80" width="220" height="160" fill="#E7E9E2" stroke="#131E1B" stroke-width="3"/>
+          <rect x="90" y="110" width="60" height="90" fill="#215952" opacity="0.5"/>
+          <rect x="170" y="110" width="60" height="90" fill="#215952" opacity="0.3"/>
+          <rect x="340" y="150" width="180" height="110" fill="#C99A2E" opacity="0.85"/>
+          <rect x="360" y="150" width="140" height="10" fill="#131E1B" opacity="0.4"/>
+          <circle cx="620" cy="150" r="50" fill="#E7E9E2" opacity="0.6"/>
+        </svg>
+        <figcaption>Living &amp; dining — open layout, lake-facing window</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="300" fill="#1D3833"/>
+          <rect x="40" y="60" width="320" height="180" fill="#132F2B"/>
+          <rect x="60" y="90" width="120" height="120" fill="#E3B94C" opacity="0.8"/>
+          <rect x="220" y="90" width="120" height="60" fill="#E7E9E2" opacity="0.6"/>
+        </svg>
+        <figcaption>Bedroom — fitted wardrobe</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="300" fill="#E7E9E2"/>
+          <rect x="0" y="0" width="400" height="140" fill="#D7DED2"/>
+          <rect x="60" y="140" width="280" height="12" fill="#131E1B"/>
+          <rect x="70" y="152" width="80" height="90" fill="#C99A2E"/>
+          <rect x="170" y="152" width="80" height="90" fill="#E3B94C"/>
+          <rect x="270" y="152" width="70" height="90" fill="#C99A2E" opacity="0.7"/>
+        </svg>
+        <figcaption>Kitchen — modular fittings</figcaption>
+      </figure>
+      <figure>
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="300" fill="#132F2B"/>
+          <rect x="0" y="200" width="400" height="100" fill="#215952"/>
+          <path d="M0 200 Q100 180 200 200 T400 200" stroke="#E7E9E2" stroke-width="3" fill="none" opacity="0.5"/>
+          <circle cx="330" cy="60" r="30" fill="#E3B94C"/>
+        </svg>
+        <figcaption>Balcony — Powai Lake view</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="location">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Everything Powai is known for, within reach</h2>
+      <p>Distances measured on foot and by road from Main Street. This is the same stretch that put Hiranandani Gardens, IIT Bombay and Powai Lake on Mumbai's map.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6M9 5h6M6 22V12a6 6 0 0112 0v10M4 22h16M10 22v-4h4v4"/></svg>
+        <div class="dist">1.3 km · 5 min drive</div>
+        <h3>Dr. L.H. Hiranandani Hospital</h3>
+        <p>Multi-speciality hospital, open 24 hours, rated 4.6 by over 5,800 patients.</p>
+      </div>
+      <div class="loc-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+        <div class="dist">1.7 km · 6 min drive</div>
+        <h3>IIT Bombay Campus</h3>
+        <p>Lakeside greenery, tree-lined roads and open-air walking paths.</p>
+      </div>
+      <div class="loc-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16l-1.5 11a2 2 0 01-2 1.8H7.5a2 2 0 01-2-1.8L4 8zM8 8V6a4 4 0 018 0v2"/></svg>
+        <div class="dist">0.7 km · 3 min drive</div>
+        <h3>Hiranandani DMart</h3>
+        <p>Everyday groceries and essentials, open 7am–11pm, rated 4.2 by 21,000+ shoppers.</p>
+      </div>
+      <div class="loc-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l2 13H4L6 3zM4 16h16M8 20h8"/><circle cx="9" cy="19" r="0"/></svg>
+        <div class="dist">0.9 km · 4 min drive</div>
+        <h3>Cult Hiranandani Gardens</h3>
+        <p>Group fitness classes on Main St itself — HRX, boxing and yoga, rated 4.7.</p>
+      </div>
+      <div class="loc-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 11h16M8 16v3M16 16v3M7 8h2M15 8h2"/><circle cx="7.5" cy="19" r="1"/><circle cx="16.5" cy="19" r="1"/></svg>
+        <div class="dist">0.2 km · 3 min walk</div>
+        <h3>Hiranandani Powai Bus Station</h3>
+        <p>BEST AC buses to Andheri, Jogeshwari, Malad and Sakinaka, plus feeder routes to Kanjurmarg and Vikhroli stations.</p>
+      </div>
+      <div class="loc-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="9" rx="1"/><path d="M8 10V6a4 4 0 018 0v4M2 19h20"/></svg>
+        <div class="dist">2.5 km · 10 min drive</div>
+        <h3>Saki Naka Metro (Line 1)</h3>
+        <p>Nearest metro connection, linking Powai to Andheri and the western suburbs.</p>
+      </div>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://maps.google.com/maps?q=Main%20Street%2C%20Powai%2C%20Mumbai%2C%20Maharashtra%20400076&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Map showing Main Street, Powai, Mumbai">
+      </iframe>
+    </div>
+    <div class="map-strip">
+      <span><strong>Address —</strong> Main Street, Powai, Mumbai, Maharashtra 400076</span>
+      <span>Nearest landmark: Powai Lake, 0.6 km</span>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="inquire">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Inquire online</h2>
+      <p>Leave your details and what you'd like to know — monthly rent, security deposit, or a move-in date. We reply by email, usually within a day.</p>
+    </div>
+    <form class="inquiry-form" action="https://formsubmit.co/YOUR-EMAIL@example.com" method="POST">
+      <input type="hidden" name="_subject" value="New inquiry — Shruti Properties, Powai">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="form-row">
+        <label>Full name
+          <input type="text" name="Name" required>
+        </label>
+        <label>Phone number
+          <input type="tel" name="Phone" required>
+        </label>
+      </div>
+      <div class="form-row">
+        <label>Email
+          <input type="email" name="Email" required>
+        </label>
+        <label>Preferred visit day
+          <input type="date" name="Preferred visit date">
+        </label>
+      </div>
+      <label class="full">Message
+        <textarea name="Message" rows="4" placeholder="e.g. Interested in the 1BHK — could I see it this weekend?"></textarea>
+      </label>
+      <button type="submit" class="btn-primary">Send Inquiry</button>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>The views that come with the address</h2>
+      <p>Powai's setting is what most residents mention first — a working lake, a forested campus, and a skyline that stays low enough to see the sky.</p>
+    </div>
+    <div class="views">
+      <div class="view-card">
+        <img src="Images/powai-lake.png" alt="Sunset over Powai Lake" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <h3>Powai Lake</h3>
+        <p>A 0.6 km walk to the promenade — the neighbourhood's evening ritual.</p>
+      </div>
+      <div class="view-card">
+        <img src="Images/iit-bombay.png" alt="IIT Bombay campus building surrounded by trees" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <h3>IIT Bombay's green belt</h3>
+        <p>Uninterrupted tree cover borders the campus, visible from upper floors.</p>
+      </div>
+      <div class="view-card">
+        <img src="Images/hiranandani-skyline.png" alt="Hiranandani Gardens skyline" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:2px; margin-bottom:16px;">
+        <h3>Hiranandani skyline</h3>
+        <p>A low, planned skyline that keeps the neighbourhood walkable and open.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Get in touch</h2>
+      <p>Connect with Shruti Properties for trusted rental homes in Powai. Our team is ready to help you find, view and move into your next home with confidence and expert guidance.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg>
+        <h3>Contact</h3>
+        <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+        <p><a href="mailto:hello@shrutiproperties.com">hello@shrutiproperties.com</a></p>
+      </div>
+      <div class="contact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+        <h3>Timings</h3>
+        <p>Mon – Sun<br>10:00 AM – 10:00 PM</p>
+      </div>
+      <div class="contact-card">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-7.58 8-13a8 8 0 10-16 0c0 5.42 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
+        <h3>Address</h3>
+        <p>Main Street, Powai,<br>Mumbai, Maharashtra 400076</p>
+      </div>
+    </div>
+    <div class="cta">
+      <div>
+        <h2>See the apartment in person</h2>
+        <p>Site visits run daily, 10am–10pm. Bring your questions about monthly rent, security deposit and move-in dates.</p>
+      </div>
+      <a class="btn-primary" href="#inquire">Inquire Online</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Shruti Properties — Powai, Mumbai 400076 · shrutiproperties.com</span>
+    <span>© 2026 Shruti Properties</span>
+  </div>
+</footer>
+
+</body>
+</html>
