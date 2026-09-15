@@ -3,612 +3,2513 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shruti Properties — 1BHK Homes for Rent in Powai, Mumbai</title>
+
+<title>Raut Suites — 1BHK Homes in Hiranandani Gardens, Powai, Mumbai</title>
+
+<!-- Raut Suites Browser Tab Logo -->
+<link rel="icon" type="image/png" href="Images/logo.png">
+<link rel="apple-touch-icon" href="Images/logo.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --paper: #F9F8F3;
-    --paper-deep: #EFECE4;
-    --card-bg: #FFFFFF;
-    --ink: #0F1715;
-    --ink-soft: #424E48;
-    --lake: #1E4D45;
-    --lake-deep: #0B201D;
-    --brass: #B5821B;
-    --brass-soft: #D8A232;
-    --line: rgba(15,23,21,0.12);
-    --radius: 4px;
-    --shadow: 0 2px 12px rgba(0,0,0,0.04);
+
+:root {
+  --paper: #F9F8F3;
+  --paper-deep: #EFECE4;
+  --card-bg: #FFFFFF;
+  --ink: #0F1715;
+  --ink-soft: #424E48;
+  --lake: #1E4D45;
+  --lake-deep: #0B201D;
+  --brass: #B5821B;
+  --brass-soft: #D8A232;
+  --line: rgba(15,23,21,0.12);
+  --radius: 4px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img,
+svg,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+.display {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 640px) {
+  .wrap {
+    padding: 0 20px;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; overflow-x: hidden; }
-  body {
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(249,248,243,0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Fraunces', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--lake-deep);
+}
+
+.brand span {
+  color: var(--brass);
+}
+
+.brand-logo {
+  width: 68px;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.navlinks {
+  display: flex;
+  gap: 24px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  align-items: center;
+}
+
+.navlinks a {
+  transition: color 0.2s ease;
+}
+
+.navlinks a:hover {
+  color: var(--brass);
+}
+
+.navcta {
+  background: var(--lake-deep);
+  color: #FFFFFF !important;
+  padding: 10px 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: background 0.2s ease;
+}
+
+.navcta:hover {
+  background: var(--lake);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: var(--ink);
+}
+
+.menu-toggle svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     background: var(--paper);
-    color: var(--ink);
-    font-family: 'Manrope', sans-serif;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    backdrop-filter: blur(8px);
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--line);
+    gap: 16px;
+    align-items: flex-start;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+
+  .navlinks a {
+    font-size: 1rem;
+    font-weight: 600;
     width: 100%;
   }
-  img, svg, iframe { display: block; max-width: 100%; }
-  h1, h2, h3, .display {
-    font-family: 'Fraunces', serif;
-    font-weight: 500;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  a { color: inherit; text-decoration: none; }
-  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
-  @media (max-width: 640px) { .wrap { padding: 0 20px; } }
-
-  /* NAV & MOBILE DROPDOWN */
-  header {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(249, 248, 243, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--line);
-  }
-  nav {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 0; position: relative;
-  }
-  .brand { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 600; color: var(--lake-deep); }
-  .brand span { color: var(--brass); }
-
-  .navlinks { display: flex; gap: 24px; font-size: 0.92rem; color: var(--ink-soft); align-items: center; }
-  .navlinks a { transition: color 0.2s ease; }
-  .navlinks a:hover { color: var(--brass); }
 
   .navcta {
-    background: var(--lake-deep); color: #FFFFFF !important; padding: 10px 20px;
-    font-size: 0.88rem; font-weight: 600; border-radius: var(--radius);
-    transition: background 0.2s ease;
-  }
-  .navcta:hover { background: var(--lake); }
-
-  /* Hamburger Toggle */
-  .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    color: var(--ink);
-  }
-  .menu-toggle svg { width: 24px; height: 24px; }
-
-  @media (max-width: 768px) {
-    .menu-toggle { display: block; }
-
-    .navlinks {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--paper);
-      backdrop-filter: blur(8px);
-      padding: 20px 24px;
-      border-bottom: 1px solid var(--line);
-      gap: 16px;
-      align-items: flex-start;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-
-    .navlinks.active { display: flex; }
-    .navlinks a { font-size: 1rem; font-weight: 600; width: 100%; }
-    .navcta { margin-top: 8px; width: 100%; text-align: center; }
-  }
-
-  /* HERO */
-  .hero { position: relative; overflow: hidden; padding-top: 32px; }
-  .hero-grid {
-    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 56px; align-items: center;
-    padding: 36px 0 72px;
-  }
-  @media (max-width: 900px) {
-    .hero-grid { grid-template-columns: 1fr; padding: 24px 0 40px; gap: 36px; text-align: center; }
-    .hero h1, .hero p.lede { margin-left: auto; margin-right: auto; }
-    .eyebrow { justify-content: center; }
-    .eyebrow::before { display: none; }
-    .hero-actions { justify-content: center; }
-    .hero-stats { justify-content: center; }
-  }
-  .eyebrow {
-    display: inline-flex; align-items: center; gap: 10px;
-    color: var(--brass); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 22px;
-  }
-  .eyebrow::before { content: ""; width: 26px; height: 1.5px; background: var(--brass); }
-  .hero-brand {
-    font-family: 'Fraunces', serif;
-    font-size: clamp(2.8rem, 6vw, 4.4rem);
-    font-weight: 600;
-    line-height: 0.95;
-    color: var(--lake-deep);
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
-  }
-  .hero h1 {
-    font-size: clamp(1.5rem, 2.6vw, 2rem);
-    font-weight: 500;
-    line-height: 1.25;
-    max-width: 20ch;
-    color: var(--ink-soft);
-    margin-bottom: 22px;
-  }
-  .hero p.lede {
-    font-size: 1.08rem; color: var(--ink-soft); max-width: 46ch; margin-bottom: 30px;
-  }
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
-  .btn-primary {
-    background: var(--lake-deep); color: #FFFFFF; padding: 14px 26px;
-    font-weight: 600; font-size: 0.95rem; border-radius: var(--radius);
-    transition: background .2s ease, transform .1s ease;
-  }
-  .btn-primary:hover { background: var(--lake); }
-  .btn-ghost {
-    border: 1.5px solid var(--lake-deep); color: var(--lake-deep); padding: 14px 26px;
-    font-weight: 600; font-size: 0.95rem; border-radius: var(--radius);
-    transition: background .2s ease;
-  }
-  .btn-ghost:hover { background: rgba(11,32,29,0.05); }
-  .hero-stats { display: flex; gap: 38px; flex-wrap: wrap; }
-  .hero-stats div strong {
-    display: block; font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--lake-deep);
-  }
-  .hero-stats div span { font-size: 0.82rem; color: var(--ink-soft); }
-
-  .hero-art { position: relative; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
-  .hero-art svg { width: 100%; height: auto; }
-
-  /* SECTION HEADS */
-  .section { padding: 88px 0; }
-  .section.tight { padding: 64px 0; }
-  .section-head {
-    max-width: 56ch;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 48px;
+    margin-top: 8px;
+    width: 100%;
     text-align: center;
   }
-  .section-head h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); margin-bottom: 14px; color: var(--lake-deep); }
-  .section-head p { color: var(--ink-soft); font-size: 1.02rem; }
-  .alt { background: var(--paper-deep); }
+}
 
-  /* GALLERY */
-  .gallery { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0 72px;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(249,248,243,0.30),
+      rgba(249,248,243,0.16) 50%,
+      rgba(249,248,243,0.42)
+    ),
+    url('Images/hero-skyline.jpg');
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.hero-copy {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  background: rgba(249,248,243,0.78);
+  backdrop-filter: blur(7px);
+  border-radius: var(--radius);
+  padding: 42px 52px;
+  text-align: center;
+}
+
+.hero-copy .eyebrow {
+  justify-content: center;
+}
+
+.hero-copy .eyebrow::before {
+  display: none;
+}
+
+.hero-copy > img {
+  display: block;
+  margin: 0 auto 14px;
+}
+
+.hero-copy .hero-brand {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1,
+.hero p.lede {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero h1 {
+  max-width: 32ch;
+}
+
+.hero p.lede {
+  max-width: 62ch;
+}
+
+.hero-actions {
+  justify-content: center;
+}
+
+.hero-stats {
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 36px 0 48px;
+  }
+
+  .hero-copy {
+    padding: 32px 28px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .hero-copy {
+    padding: 28px 20px;
+  }
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--brass);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 22px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 26px;
+  height: 1.5px;
+  background: var(--brass);
+}
+
+.hero-brand {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2.8rem, 6vw, 4.4rem);
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--lake-deep);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 {
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 500;
+  line-height: 1.25;
+  max-width: 20ch;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+
+.hero p.lede {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.btn-primary {
+  background: var(--lake-deep);
+  color: #FFFFFF;
+  padding: 14px 26px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  transition: background .2s ease, transform .1s ease;
+}
+
+.btn-primary:hover {
+  background: var(--lake);
+}
+
+.btn-ghost {
+  border: 1.5px solid var(--lake-deep);
+  color: var(--lake-deep);
+  padding: 14px 26px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius);
+  transition: background .2s ease;
+}
+
+.btn-ghost:hover {
+  background: rgba(11,32,29,0.05);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 38px;
+  flex-wrap: wrap;
+}
+
+.hero-stats div strong {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  color: var(--lake-deep);
+}
+
+.hero-stats div span {
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.hero-art {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  aspect-ratio: 560/460;
+}
+
+.hero-art img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+  padding: 88px 0;
+}
+
+.section.tight {
+  padding: 64px 0;
+}
+
+.section-head {
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.section-head h2 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  margin-bottom: 14px;
+  color: var(--lake-deep);
+}
+
+.section-head p {
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.alt {
+  background: var(--paper-deep);
+}
+
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+}
+
+.gallery figure {
+  grid-column: span 2;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--lake-deep);
+  position: relative;
+  aspect-ratio: 4/3;
+  box-shadow: var(--shadow);
+}
+
+.gallery figure:first-child {
+  grid-column: span 2;
+  aspect-ratio: 4/3;
+}
+
+.gallery figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slideshow-figure {
+  margin: 32px auto 0;
+  max-width: 960px;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--lake-deep);
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.slideshow .slide.active {
+  opacity: 1;
+}
+
+.slide-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: rgba(11,32,29,0.55);
+  color: #FFFFFF;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.slide-nav:hover {
+  background: rgba(11,32,29,0.85);
+}
+
+.slide-nav.prev {
+  left: 16px;
+}
+
+.slide-nav.next {
+  right: 16px;
+}
+
+@media (max-width: 760px) {
+
+  .slideshow-figure {
+    aspect-ratio: 4/3;
+    margin-top: 24px;
+  }
+}
+
+.gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 18px;
+  color: #FFFFFF;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: linear-gradient(to top, rgba(11,32,29,0.9), transparent);
+}
+
+@media (max-width: 760px) {
+
+  .gallery {
+    grid-template-columns: repeat(2,1fr);
+  }
+
   .gallery figure {
-    grid-column: span 2; border-radius: var(--radius); overflow: hidden;
-    background: var(--lake-deep); position: relative; aspect-ratio: 4/3;
-    box-shadow: var(--shadow);
-  }
-  .gallery figure:first-child { grid-column: span 4; aspect-ratio: 16/8; }
-  .gallery figcaption {
-    position: absolute; bottom: 0; left: 0; right: 0; padding: 16px 18px;
-    color: #FFFFFF; font-size: 0.85rem; font-weight: 600;
-    background: linear-gradient(to top, rgba(11,32,29,0.9), transparent);
-  }
-  @media (max-width: 760px) {
-    .gallery { grid-template-columns: repeat(2,1fr); }
-    .gallery figure { grid-column: span 2; }
-    .gallery figure:first-child { grid-column: span 2; }
+    grid-column: span 2;
   }
 
-  /* AMENITIES / LOCATION */
-  .loc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
-  .loc-card { background: var(--card-bg); padding: 30px 26px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
-  .loc-card .icon { width: 34px; height: 34px; margin-bottom: 18px; color: var(--lake); }
-  .loc-card h3 { font-size: 1.05rem; margin-bottom: 6px; color: var(--lake-deep); }
-  .loc-card .dist { color: var(--brass); font-weight: 700; font-size: 0.88rem; margin-bottom: 10px; }
-  .loc-card p { color: var(--ink-soft); font-size: 0.9rem; }
-  @media (max-width: 860px) { .loc-grid { grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 560px) { .loc-grid { grid-template-columns: 1fr; } }
-
-  /* MAP STRIP */
-  .map-embed {
-    border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line);
-    margin-top: 32px; filter: grayscale(0.15) contrast(1.02); width: 100%; box-shadow: var(--shadow);
+  .gallery figure:first-child {
+    grid-column: span 2;
   }
-  .map-embed iframe { display: block; width: 100%; }
-  .map-strip {
-    display: flex; align-items: center; gap: 18px; padding: 22px 26px;
-    background: var(--lake-deep); color: #FFFFFF; border-radius: var(--radius);
-    margin-top: 24px; font-size: 0.92rem; flex-wrap: wrap; justify-content: center;
-  }
-  .map-strip strong { color: var(--brass-soft); }
+}
 
-  /* INQUIRY FORM */
+
+/* =========================
+   LOCATION
+========================= */
+
+.loc-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+}
+
+.loc-card {
+  background: var(--card-bg);
+  padding: 30px 26px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.loc-card .icon {
+  width: 34px;
+  height: 34px;
+  margin-bottom: 18px;
+  color: var(--lake);
+}
+
+.loc-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+  color: var(--lake-deep);
+}
+
+.loc-card .dist {
+  color: var(--brass);
+  font-weight: 700;
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+}
+
+.loc-card p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+
+  .loc-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 560px) {
+
+  .loc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.map-embed {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  margin-top: 32px;
+  filter: grayscale(0.15) contrast(1.02);
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
+.map-strip {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  background: var(--lake-deep);
+  color: #FFFFFF;
+  border-radius: var(--radius);
+  margin-top: 24px;
+  font-size: 0.92rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.map-strip strong {
+  color: var(--brass-soft);
+}
+
+
+/* =========================
+   INQUIRY FORM
+========================= */
+
+.inquiry-form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--card-bg);
+  padding: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 640px) {
+
   .inquiry-form {
-    max-width: 640px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background: var(--card-bg);
-    padding: 36px;
-    border-radius: var(--radius);
-    border: 1px solid var(--line);
-    box-shadow: var(--shadow);
+    padding: 24px 18px;
   }
-  @media (max-width: 640px) { .inquiry-form { padding: 24px 18px; } }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 640px) { .form-row { grid-template-columns: 1fr; } }
-  .inquiry-form label {
-    display: flex; flex-direction: column; gap: 8px; text-align: left;
-    font-size: 0.85rem; font-weight: 600; color: var(--ink);
-  }
-  .inquiry-form label.full { width: 100%; }
-  .inquiry-form input, .inquiry-form textarea {
-    font-family: 'Manrope', sans-serif; font-size: 0.95rem; color: var(--ink);
-    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
-    padding: 12px 14px; resize: vertical;
-  }
-  .inquiry-form input:focus, .inquiry-form textarea:focus {
-    outline: 2px solid var(--lake); outline-offset: 1px; background: #FFFFFF;
-  }
-  .inquiry-form .btn-primary {
-    align-self: center;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-  }
+}
 
-  /* VIEWS */
-  .views { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-  @media (max-width: 760px) { .views { grid-template-columns: 1fr; } }
-  .view-card { background: var(--card-bg); border: 1px solid var(--line); padding: 20px; border-radius: var(--radius); box-shadow: var(--shadow); }
-  .view-card h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--lake-deep); }
-  .view-card p { color: var(--ink-soft); font-size: 0.9rem; }
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 
-  /* CONTACT */
+@media (max-width: 640px) {
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inquiry-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.inquiry-form label.full {
+  width: 100%;
+}
+
+.inquiry-form input,
+.inquiry-form textarea {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.inquiry-form input:focus,
+.inquiry-form textarea:focus {
+  outline: 2px solid var(--lake);
+  outline-offset: 1px;
+  background: #FFFFFF;
+}
+
+.inquiry-form .btn-primary {
+  align-self: center;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.inquiry-form .btn-primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+
+/* Success / Error message */
+
+.form-message {
+  display: none;
+  margin-top: 4px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-message.success {
+  display: block;
+  color: var(--lake-deep);
+  background: rgba(30,77,69,0.10);
+  border: 1px solid rgba(30,77,69,0.20);
+}
+
+.form-message.error {
+  display: block;
+  color: #8B1E1E;
+  background: rgba(139,30,30,0.08);
+  border: 1px solid rgba(139,30,30,0.18);
+}
+
+
+/* =========================
+   VIEWS
+========================= */
+
+.views {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+
+@media (max-width: 760px) {
+
+  .views {
+    grid-template-columns: 1fr;
+  }
+}
+
+.view-card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.view-card img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 18px;
+}
+
+.view-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: var(--lake-deep);
+}
+
+.view-card p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  padding: 30px 26px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.contact-card .icon {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 16px;
+  color: var(--lake);
+}
+
+.contact-card h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--lake-deep);
+}
+
+.contact-card p {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.contact-card a {
+  color: var(--lake);
+  font-weight: 600;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+  color: var(--brass);
+}
+
+@media (max-width: 760px) {
+
   .contact-grid {
-    display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 40px;
+    grid-template-columns: 1fr;
   }
-  .contact-card { background: var(--card-bg); padding: 30px 26px; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow); }
-  .contact-card .icon { width: 30px; height: 30px; margin-bottom: 16px; color: var(--lake); }
-  .contact-card h3 { font-size: 1.0rem; margin-bottom: 10px; color: var(--lake-deep); }
-  .contact-card p { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.6; }
-  .contact-card a { color: var(--lake); font-weight: 600; }
-  .contact-card a:hover { text-decoration: underline; color: var(--brass); }
-  @media (max-width: 760px) { .contact-grid { grid-template-columns: 1fr; } }
+}
 
-  /* CTA */
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  background: var(--lake-deep);
+  color: #FFFFFF;
+  border-radius: var(--radius);
+  padding: 56px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 30px rgba(11,32,29,0.15);
+}
+
+@media (max-width: 760px) {
+
   .cta {
-    background: var(--lake-deep); color: #FFFFFF; border-radius: var(--radius);
-    padding: 56px 48px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
-    box-shadow: 0 8px 30px rgba(11,32,29,0.15);
+    text-align: center;
+    justify-content: center;
+    padding: 36px 24px;
   }
-  @media (max-width: 760px) { .cta { text-align: center; justify-content: center; padding: 36px 24px; } }
-  .cta h2 { color: #FFFFFF; font-size: clamp(1.6rem,3vw,2.1rem); max-width: 16ch; }
-  .cta p { color: #D7E0DD; margin-top: 10px; max-width: 34ch; }
-  .cta .btn-primary { background: var(--brass); color: #FFFFFF; }
-  .cta .btn-primary:hover { background: var(--brass-soft); }
+}
 
-  footer { padding: 40px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 0.85rem; background: var(--paper); }
-  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-  @media (max-width: 640px) { footer .wrap { justify-content: center; text-align: center; } }
+.cta h2 {
+  color: #FFFFFF;
+  font-size: clamp(1.6rem,3vw,2.1rem);
+  max-width: 16ch;
+}
+
+.cta p {
+  color: #D7E0DD;
+  margin-top: 10px;
+  max-width: 34ch;
+}
+
+.cta .btn-primary {
+  background: var(--brass);
+  color: #FFFFFF;
+}
+
+.cta .btn-primary:hover {
+  background: var(--brass-soft);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  background: var(--paper);
+}
+
+footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+
+  footer .wrap {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 </style>
 </head>
+
+
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
-  <nav class="wrap">
-    <div class="brand">Shruti <span>Properties</span></div>
-    <button class="menu-toggle" aria-label="Toggle navigation menu" onclick="toggleMenu()">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-    <div class="navlinks" id="navLinks">
-      <a href="#gallery" onclick="closeMenu()">Gallery</a>
-      <a href="#location" onclick="closeMenu()">Location</a>
-      <a href="#inquire" onclick="closeMenu()">Inquire</a>
-      <a href="#contact" onclick="closeMenu()">Contact</a>
-      <a href="#inquire" class="navcta" onclick="closeMenu()">Inquire Online</a>
-    </div>
-  </nav>
+
+  <div class="wrap">
+
+    <nav>
+
+      <a href="#home" class="brand">
+
+        <img
+          src="Images/logo.png"
+          alt="Raut Suites Logo"
+          class="brand-logo">
+
+        <span>Raut Suites</span>
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Open menu">
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2">
+
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+
+        </svg>
+
+      </button>
+
+
+      <div class="navlinks" id="navLinks">
+
+        <a href="#gallery" onclick="closeMenu()">Gallery</a>
+
+        <a href="#location" onclick="closeMenu()">Location</a>
+
+        <a href="#inquire" onclick="closeMenu()">Inquire</a>
+
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+
+        <a
+          href="#inquire"
+          class="navcta"
+          onclick="closeMenu()">
+
+          Inquire Online
+
+        </a>
+
+      </div>
+
+    </nav>
+
+  </div>
+
 </header>
 
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main id="home">
+
+
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">POWAI, MUMBAI 400076</div>
-      <div class="hero-brand">Shruti Properties</div>
-      <h1>1BHK homes for rent on Main Street, steps from Powai's green heart</h1>
-      <p class="lede">A quiet residential address inside Mumbai's most self-sufficient neighbourhood — lakeside walks, IIT Bombay's tree cover, and every daily errand within a ten-minute walk.</p>
-      <div class="hero-actions">
-        <a href="#inquire" class="btn-primary">Book a Site Visit</a>
-        <a href="#inquire" class="btn-ghost">Inquire Online</a>
+
+  <div class="wrap">
+
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+
+        <div class="eyebrow">
+          POWAI, MUMBAI 400076
+        </div>
+
+
+        <img
+          src="Images/logo.png"
+          alt="Raut Suites"
+          style="width:110px;height:auto;">
+
+
+        <div class="hero-brand">
+          Raut Suites
+        </div>
+
+
+        <h1>
+          A thoughtfully designed stay in the heart of Hiranandani Gardens, Powai.
+        </h1>
+
+
+        <p class="lede">
+          A quiet residential address inside Mumbai's most self-sufficient
+          neighbourhood — lakeside walks, IIT Bombay's tree cover, and every
+          daily errand within a ten-minute walk.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            href="#inquire"
+            class="btn-primary">
+
+            Inquire Online
+
+          </a>
+
+
+          <a
+            href="#contact"
+            class="btn-ghost">
+
+            Contact Us
+
+          </a>
+
+        </div>
+
+
+        <div class="hero-stats">
+
+          <div>
+
+            <strong>1BHK</strong>
+
+            <span>
+              Fully furnished home
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>Powai</strong>
+
+            <span>
+              Hiranandani Gardens
+            </span>
+
+          </div>
+
+
+          <div>
+
+            <strong>24/7</strong>
+
+            <span>
+              Convenient access
+            </span>
+
+          </div>
+
+        </div>
+
       </div>
-      <div class="hero-stats">
-        <div><strong>1 BHK</strong><span>485–560 sq.ft carpet</span></div>
-        <div><strong>0.9 km</strong><span>to Cult Hiranandani Gardens</span></div>
-        <div><strong>1.3 km</strong><span>to Hiranandani Hospital</span></div>
-      </div>
+
     </div>
-    <div class="hero-art">
-      <svg viewBox="0 0 560 460" xmlns="http://www.w3.org/2000/svg">
-        <rect width="560" height="460" fill="#EFECE4"/>
-        <rect width="560" height="260" fill="#E2E7E1"/>
-        <rect y="260" width="560" height="200" fill="#1E4D45"/>
-        <rect y="260" width="560" height="6" fill="#0B201D"/>
-        <g opacity="0.25" stroke="#F9F8F3" stroke-width="3">
-          <line x1="90" y1="300" x2="90" y2="340"/>
-          <line x1="150" y1="310" x2="150" y2="360"/>
-          <line x1="260" y1="300" x2="260" y2="350"/>
-          <line x1="420" y1="310" x2="420" y2="355"/>
-        </g>
-        <g>
-          <rect x="60" y="140" width="46" height="120" fill="#0F1715"/>
-          <rect x="112" y="100" width="38" height="160" fill="#122E29"/>
-          <rect x="156" y="160" width="30" height="100" fill="#0F1715"/>
-          <rect x="230" y="80" width="52" height="180" fill="#0B201D"/>
-          <rect x="290" y="130" width="36" height="130" fill="#122E29"/>
-          <rect x="334" y="110" width="42" height="150" fill="#0F1715"/>
-          <rect x="384" y="150" width="30" height="110" fill="#122E29"/>
-          <rect x="420" y="95" width="48" height="165" fill="#0B201D"/>
-          <rect x="474" y="150" width="34" height="110" fill="#0F1715"/>
-        </g>
-        <g fill="#D8A232" opacity="0.85">
-          <rect x="240" y="95" width="6" height="8"/><rect x="252" y="95" width="6" height="8"/>
-          <rect x="264" y="95" width="6" height="8"/><rect x="240" y="115" width="6" height="8"/>
-          <rect x="252" y="115" width="6" height="8"/><rect x="264" y="115" width="6" height="8"/>
-          <rect x="240" y="135" width="6" height="8"/><rect x="252" y="135" width="6" height="8"/>
-          <rect x="430" y="112" width="6" height="8"/><rect x="442" y="112" width="6" height="8"/>
-          <rect x="454" y="112" width="6" height="8"/><rect x="430" y="132" width="6" height="8"/>
-          <rect x="442" y="132" width="6" height="8"/><rect x="454" y="132" width="6" height="8"/>
-        </g>
-        <g fill="#424E48">
-          <circle cx="30" cy="255" r="20"/>
-          <circle cx="500" cy="255" r="26"/>
-          <circle cx="530" cy="250" r="16"/>
-        </g>
-        <g stroke="#0F1715" stroke-width="2" fill="none" opacity="0.6">
-          <path d="M400 50 q6 -8 12 0 q6 -8 12 0"/>
-          <path d="M440 70 q5 -7 10 0 q5 -7 10 0"/>
-        </g>
-      </svg>
-    </div>
+
   </div>
+
 </section>
 
-<section class="section alt" id="gallery">
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section class="section" id="gallery">
+
   <div class="wrap">
+
     <div class="section-head">
-      <h2>Inside the home</h2>
-      <p>Every 1BHK unit is built around daylight and cross-ventilation — the same lake breeze that runs through Powai's older Hiranandani blocks.</p>
+
+      <div class="eyebrow">
+        THE SUITE
+      </div>
+
+
+      <h2>
+        A home designed for comfortable everyday living.
+      </h2>
+
+
+      <p>
+        Explore the living spaces, bedroom, views and thoughtful details
+        throughout Raut Suites.
+      </p>
+
     </div>
+
+
     <div class="gallery">
+
+
       <figure>
-        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
-          <rect width="800" height="400" fill="#E2E7E1"/>
-          <rect x="0" y="260" width="800" height="140" fill="#CBD5C9"/>
-          <rect x="60" y="80" width="220" height="160" fill="#F9F8F3" stroke="#0F1715" stroke-width="3"/>
-          <rect x="90" y="110" width="60" height="90" fill="#1E4D45" opacity="0.5"/>
-          <rect x="170" y="110" width="60" height="90" fill="#1E4D45" opacity="0.3"/>
-          <rect x="340" y="150" width="180" height="110" fill="#B5821B" opacity="0.85"/>
-          <rect x="360" y="150" width="140" height="10" fill="#0F1715" opacity="0.4"/>
-          <circle cx="620" cy="150" r="50" fill="#F9F8F3" opacity="0.6"/>
-        </svg>
-        <figcaption>Living &amp; dining — open layout, lake-facing window</figcaption>
+
+        <img
+          src="Images/living-1.jpg"
+          alt="Raut Suites living room">
+
+        <figcaption>
+          Comfortable living space
+        </figcaption>
+
       </figure>
+
+
       <figure>
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="300" fill="#122E29"/>
-          <rect x="40" y="60" width="320" height="180" fill="#0B201D"/>
-          <rect x="60" y="90" width="120" height="120" fill="#D8A232" opacity="0.8"/>
-          <rect x="220" y="90" width="120" height="60" fill="#F9F8F3" opacity="0.6"/>
-        </svg>
-        <figcaption>Bedroom — fitted wardrobe</figcaption>
+
+        <img
+          src="Images/bedroom-1.jpg"
+          alt="Raut Suites bedroom">
+
+        <figcaption>
+          Quiet and comfortable bedroom
+        </figcaption>
+
       </figure>
+
+
       <figure>
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="300" fill="#F9F8F3"/>
-          <rect x="0" y="0" width="400" height="140" fill="#E2E7E1"/>
-          <rect x="60" y="140" width="280" height="12" fill="#0F1715"/>
-          <rect x="70" y="152" width="80" height="90" fill="#B5821B"/>
-          <rect x="170" y="152" width="80" height="90" fill="#D8A232"/>
-          <rect x="270" y="152" width="70" height="90" fill="#B5821B" opacity="0.7"/>
-        </svg>
-        <figcaption>Kitchen — modular fittings</figcaption>
+
+        <img
+          src="Images/view-1.jpg"
+          alt="View from Raut Suites">
+
+        <figcaption>
+          Views around Hiranandani Gardens
+        </figcaption>
+
       </figure>
+
+
       <figure>
-        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-          <rect width="400" height="300" fill="#0B201D"/>
-          <rect x="0" y="200" width="400" height="100" fill="#1E4D45"/>
-          <path d="M0 200 Q100 180 200 200 T400 200" stroke="#F9F8F3" stroke-width="3" fill="none" opacity="0.5"/>
-          <circle cx="330" cy="60" r="30" fill="#D8A232"/>
-        </svg>
-        <figcaption>Balcony — Powai Lake view</figcaption>
+
+        <img
+          src="Images/living-2.jpg"
+          alt="Raut Suites interior">
+
+        <figcaption>
+          Thoughtfully arranged interiors
+        </figcaption>
+
       </figure>
+
     </div>
+
+
+
+    <!-- SLIDESHOW -->
+
+    <figure class="slideshow-figure">
+
+      <div
+        class="slideshow"
+        id="gallerySlideshow">
+
+
+        <img
+          class="slide active"
+          src="Images/slideshow/bedroom-wide-view.jpg"
+          alt="Bedroom wide view">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/bedroom-tv-wardrobe.jpg"
+          alt="Bedroom TV and wardrobe">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/hallway-to-utility.jpg"
+          alt="Hallway to utility area">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/laundry-room.jpg"
+          alt="Laundry room">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/entrance-door-51.jpg"
+          alt="Apartment entrance">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/bedroom-mirror-towel.jpg"
+          alt="Bedroom mirror">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/tv-unit-flowers-1.jpg"
+          alt="TV unit">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/living-room-corner.jpg"
+          alt="Living room corner">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/tv-unit-flowers-2.jpg"
+          alt="TV unit and decor">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/bedroom-wide-cabinet.jpg"
+          alt="Bedroom cabinet">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/living-room-teal-sofa-1.jpg"
+          alt="Living room teal sofa">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/wardrobe-open-interior.jpg"
+          alt="Open wardrobe">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/bedroom-tv-wall-towel.jpg"
+          alt="Bedroom TV wall">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/kitchenette-sink.jpg"
+          alt="Kitchenette sink">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/living-room-tv-sofa.jpg"
+          alt="Living room TV and sofa">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/window-view-buildings.jpg"
+          alt="Window view">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/passage-to-fridge.jpg"
+          alt="Passage to refrigerator">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/living-room-teal-sofa-2.jpg"
+          alt="Living room sofa">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/display-cabinet-books.jpg"
+          alt="Display cabinet">
+
+
+        <img
+          class="slide"
+          src="Images/slideshow/kitchen-counter-microwave.jpg"
+          alt="Kitchen counter and microwave">
+
+      </div>
+
+
+      <button
+        class="slide-nav prev"
+        id="slidePrev"
+        aria-label="Previous image">
+
+        &#10094;
+
+      </button>
+
+
+      <button
+        class="slide-nav next"
+        id="slideNext"
+        aria-label="Next image">
+
+        &#10095;
+
+      </button>
+
+    </figure>
+
   </div>
+
 </section>
 
-<section class="section" id="location">
+
+
+<!-- =========================
+     LOCATION
+========================= -->
+
+<section
+  class="section alt"
+  id="location">
+
   <div class="wrap">
+
     <div class="section-head">
-      <h2>Everything Powai is known for, within reach</h2>
-      <p>Distances measured on foot and by road from Main Street. This is the same stretch that put Hiranandani Gardens, IIT Bombay and Powai Lake on Mumbai's map.</p>
+
+      <div class="eyebrow">
+        THE NEIGHBOURHOOD
+      </div>
+
+
+      <h2>
+        Everything you need, close to home.
+      </h2>
+
+
+      <p>
+        Raut Suites is located inside Hiranandani Gardens, with healthcare,
+        transport, shopping, education and recreation all within easy reach.
+      </p>
+
     </div>
+
+
     <div class="loc-grid">
+
+
       <div class="loc-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6M9 5h6M6 22V12a6 6 0 0112 0v10M4 22h16M10 22v-4h4v4"/></svg>
-        <div class="dist">1.3 km · 5 min drive</div>
-        <h3>Dr. L.H. Hiranandani Hospital</h3>
-        <p>Multi-speciality hospital, open 24 hours, rated 4.6 by over 5,800 patients.</p>
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Dr. L.H. Hiranandani Hospital
+        </h3>
+
+
+        <div class="dist">
+          550 m · 5 min Walk
+        </div>
+
+
+        <p>
+          Multi-speciality hospital, open 24 hours, rated 4.6 by over 5,800 patients.
+        </p>
+
       </div>
+
+
+
       <div class="loc-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
-        <div class="dist">1.7 km · 6 min drive</div>
-        <h3>IIT Bombay Campus</h3>
-        <p>Lakeside greenery, tree-lined roads and open-air walking paths.</p>
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M12 3v18M3 12h18M5 5l14 14M19 5L5 19"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          IIT Bombay Campus
+        </h3>
+
+
+        <div class="dist">
+          1.7 km · 2 min drive
+        </div>
+
+
+        <p>
+          Lakeside greenery, tree-lined roads and open-air walking paths.
+        </p>
+
       </div>
+
+
+
       <div class="loc-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16l-1.5 11a2 2 0 01-2 1.8H7.5a2 2 0 01-2-1.8L4 8zM8 8V6a4 4 0 018 0v2"/></svg>
-        <div class="dist">0.7 km · 3 min drive</div>
-        <h3>Hiranandani DMart</h3>
-        <p>Everyday groceries and essentials, open 7am–11pm, rated 4.2 by 21,000+ shoppers.</p>
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M4 5h16v14H4zM8 9h8M8 13h5"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Hiranandani DMart
+        </h3>
+
+
+        <div class="dist">
+          0.7 km · 5 min walk
+        </div>
+
+
+        <p>
+          Everyday groceries and essentials, open 7am–11pm, rated 4.2 by 21,000+ shoppers.
+        </p>
+
       </div>
+
+
+
       <div class="loc-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h12l2 13H4L6 3zM4 16h16M8 20h8"/><circle cx="9" cy="19" r="0"/></svg>
-        <div class="dist">0.9 km · 4 min drive</div>
-        <h3>Cult Hiranandani Gardens</h3>
-        <p>Group fitness classes on Main St itself — HRX, boxing and yoga, rated 4.7.</p>
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M2 12h20M5 12l2-5h10l2 5M6 12v5M18 12v5M8 17h8"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          International Airport
+        </h3>
+
+
+        <div class="dist">
+          7 km · 12 min drive
+        </div>
+
+
+        <p>
+          Just a convenient drive away from Mumbai International Airport.
+        </p>
+
       </div>
+
+
+
       <div class="loc-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 11h16M8 16v3M16 16v3M7 8h2M15 8h2"/><circle cx="7.5" cy="19" r="1"/><circle cx="16.5" cy="19" r="1"/></svg>
-        <div class="dist">0.2 km · 3 min walk</div>
-        <h3>Hiranandani Powai Bus Station</h3>
-        <p>BEST AC buses to Andheri, Jogeshwari, Malad and Sakinaka, plus feeder routes to Kanjurmarg and Vikhroli stations.</p>
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M4 18h16M6 18V7h12v11M9 7V4h6v3M9 11h6M9 14h6"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Aqua Line Metro
+        </h3>
+
+
+        <div class="dist">
+          4 km · 6 min drive
+        </div>
+
+
+        <p>
+          Convenient access to the Aqua Line Metro for seamless travel across Mumbai.
+        </p>
+
       </div>
+
+
+
       <div class="loc-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="9" rx="1"/><path d="M8 10V6a4 4 0 018 0v4M2 19h20"/></svg>
-        <div class="dist">2.5 km · 10 min drive</div>
-        <h3>Saki Naka Metro (Line 1)</h3>
-        <p>Nearest metro connection, linking Powai to Andheri and the western suburbs.</p>
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Saki Naka Metro (Line 1)
+        </h3>
+
+
+        <div class="dist">
+          4.5 km · 10 min drive
+        </div>
+
+
+        <p>
+          Nearest metro connection, linking Powai to Andheri and the western suburbs.
+        </p>
+
       </div>
+
     </div>
+
+
+
     <div class="map-embed">
+
       <iframe
         src="https://maps.google.com/maps?q=Main%20Street%2C%20Powai%2C%20Mumbai%2C%20Maharashtra%20400076&t=&z=15&ie=UTF8&iwloc=&output=embed"
-        width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Map showing Main Street, Powai, Mumbai">
+        loading="lazy"
+        allowfullscreen>
       </iframe>
+
     </div>
+
+
     <div class="map-strip">
-      <span><strong>Address —</strong> Main Street, Powai, Mumbai, Maharashtra 400076</span>
-      <span>Nearest landmark: Powai Lake, 0.6 km</span>
+
+      <div>
+
+        <strong>Address</strong> —
+        Main Street, Hiranandani Gardens, Powai, Mumbai,
+        Maharashtra 400076
+
+      </div>
+
+
+      <div>
+
+        <strong>Nearest landmark:</strong>
+        Powai Lake, 0.6 km
+
+      </div>
+
     </div>
+
   </div>
+
 </section>
 
-<section class="section alt" id="inquire">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Inquire online</h2>
-      <p>Leave your details and what you'd like to know — monthly rent, security deposit, or a move-in date. We reply by email, usually within a day.</p>
-    </div>
-    <form class="inquiry-form" action="https://formsubmit.co/YOUR-EMAIL@example.com" method="POST">
-      <input type="hidden" name="_subject" value="New inquiry — Shruti Properties, Powai">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <div class="form-row">
-        <label>Full name
-          <input type="text" name="Name" required>
-        </label>
-        <label>Phone number
-          <input type="tel" name="Phone" required>
-        </label>
-      </div>
-      <div class="form-row">
-        <label>Email
-          <input type="email" name="Email" required>
-        </label>
-        <label>Preferred visit day
-          <input type="date" name="Preferred visit date">
-        </label>
-      </div>
-      <label class="full">Message
-        <textarea name="Message" rows="4" placeholder="e.g. Interested in the 1BHK — could I see it this weekend?"></textarea>
-      </label>
-      <button type="submit" class="btn-primary">Send Inquiry</button>
-    </form>
-  </div>
-</section>
+
+
+<!-- =========================
+     VIEWS
+========================= -->
 
 <section class="section">
+
   <div class="wrap">
+
     <div class="section-head">
-      <h2>The views that come with the address</h2>
-      <p>Powai's setting is what most residents mention first — a working lake, a forested campus, and a skyline that stays low enough to see the sky.</p>
+
+      <div class="eyebrow">
+        AROUND RAUT SUITES
+      </div>
+
+
+      <h2>
+        Powai at your doorstep.
+      </h2>
+
+
+      <p>
+        Enjoy the greenery, skyline and lakeside character that make
+        Hiranandani Gardens one of Powai's most sought-after neighbourhoods.
+      </p>
+
     </div>
+
+
     <div class="views">
+
+
       <div class="view-card">
-        <img src="Images/powai-lake.png" alt="Sunset over Powai Lake" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:4px; margin-bottom:16px;">
-        <h3>Powai Lake</h3>
-        <p>A 0.6 km walk to the promenade — the neighbourhood's evening ritual.</p>
+
+        <img
+          src="Images/powai-lake.png"
+          alt="Powai Lake">
+
+
+        <h3>
+          Powai Lake
+        </h3>
+
+
+        <p>
+          A peaceful green escape for morning walks and relaxed evenings.
+        </p>
+
       </div>
+
+
+
       <div class="view-card">
-        <img src="Images/iit-bombay.png" alt="IIT Bombay campus building surrounded by trees" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:4px; margin-bottom:16px;">
-        <h3>IIT Bombay's green belt</h3>
-        <p>Uninterrupted tree cover borders the campus, visible from upper floors.</p>
+
+        <img
+          src="Images/iit-bombay.png"
+          alt="IIT Bombay">
+
+
+        <h3>
+          IIT Bombay
+        </h3>
+
+
+        <p>
+          Close to the expansive campus, greenery and tree-lined surroundings.
+        </p>
+
       </div>
+
+
+
       <div class="view-card">
-        <img src="Images/hiranandani-skyline.png" alt="Hiranandani Gardens skyline" style="width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:4px; margin-bottom:16px;">
-        <h3>Hiranandani skyline</h3>
-        <p>A low, planned skyline that keeps the neighbourhood walkable and open.</p>
+
+        <img
+          src="Images/hiranandani-skyline.png"
+          alt="Hiranandani Gardens skyline">
+
+
+        <h3>
+          Hiranandani Gardens
+        </h3>
+
+
+        <p>
+          Restaurants, cafés, shops and everyday conveniences within easy reach.
+        </p>
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 
-<section class="section alt" id="contact">
+
+
+<!-- =========================
+     INQUIRY
+========================= -->
+
+<section
+  class="section alt"
+  id="inquire">
+
   <div class="wrap">
+
     <div class="section-head">
-      <h2>Get in touch</h2>
-      <p>Connect with Shruti Properties for trusted rental homes in Powai. Our team is ready to help you find, view and move into your next home with confidence and expert guidance.</p>
+
+      <div class="eyebrow">
+        GET IN TOUCH
+      </div>
+
+
+      <h2>
+        Interested in Raut Suites?
+      </h2>
+
+
+      <p>
+        Send us your details and preferred visit date.
+        We'll get back to you shortly.
+      </p>
+
     </div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.68 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0122 16.92z"/></svg>
-        <h3>Contact</h3>
-        <p><a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
-        <p><a href="mailto:hello@shrutiproperties.com">hello@shrutiproperties.com</a></p>
+
+
+    <!--
+      EMAILJS INQUIRY FORM
+
+      EmailJS Service:
+      service_pn2cf0a
+
+      EmailJS Template:
+      template_zz4oqka
+    -->
+
+    <form
+      id="inquiryForm"
+      class="inquiry-form"
+      method="POST">
+
+
+      <div class="form-row">
+
+        <label>
+
+          Full name
+
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your name"
+            autocomplete="name"
+            required>
+
+        </label>
+
+
+        <label>
+
+          Phone
+
+          <input
+            type="tel"
+            name="Phone"
+            placeholder="+91 XXXXX XXXXX"
+            autocomplete="tel"
+            required>
+
+        </label>
+
       </div>
-      <div class="contact-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
-        <h3>Timings</h3>
-        <p>Mon – Sun<br>10:00 AM – 10:00 PM</p>
+
+
+
+      <div class="form-row">
+
+        <label>
+
+          Email
+
+          <input
+            type="email"
+            name="Email"
+            placeholder="you@example.com"
+            autocomplete="email"
+            required>
+
+        </label>
+
+
+        <label>
+
+          Preferred visit day
+
+          <input
+            type="date"
+            name="Preferred visit date">
+
+        </label>
+
       </div>
-      <div class="contact-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-7.58 8-13a8 8 0 10-16 0c0 5.42 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg>
-        <h3>Address</h3>
-        <p>Main Street, Powai,<br>Mumbai, Maharashtra 400076</p>
+
+
+
+      <label class="full">
+
+        Message
+
+        <textarea
+          name="Message"
+          rows="5"
+          placeholder="e.g. Interested in the 1BHK — could I see it this weekend?"></textarea>
+
+      </label>
+
+
+
+      <button
+        type="submit"
+        class="btn-primary">
+
+        Send Inquiry
+
+      </button>
+
+
+
+      <div
+        id="formMessage"
+        class="form-message"
+        role="status"
+        aria-live="polite">
       </div>
-    </div>
-    <div class="cta">
-      <div>
-        <h2>See the apartment in person</h2>
-        <p>Site visits run daily, 10am–10pm. Bring your questions about monthly rent, security deposit and move-in dates.</p>
-      </div>
-      <a class="btn-primary" href="#inquire">Inquire Online</a>
-    </div>
+
+    </form>
+
   </div>
+
 </section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  class="section tight"
+  id="contact">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div class="eyebrow">
+        CONTACT
+      </div>
+
+
+      <h2>
+        We're here to help.
+      </h2>
+
+
+      <p>
+        Contact us directly for availability, pricing and apartment visits.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <div class="contact-card">
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M6 2h4l2 5-3 2c1.2 2.5 3.5 4.8 6 6l2-3 5 2v4c0 1.1-.9 2-2 2C10.3 20 4 13.7 4 6c0-1.1.9-2 2-2z"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Phone
+        </h3>
+
+
+        <p>
+
+          <a href="tel:+919820899997">
+            +91 98208 99997
+          </a>
+
+        </p>
+
+      </div>
+
+
+
+      <div class="contact-card">
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2z"/>
+
+            <path d="M2 7l10 6 10-6"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          Email
+        </h3>
+
+
+        <p>
+
+          <a href="mailto:rautsuites@gmail.com">
+            rautsuites@gmail.com
+          </a>
+
+        </p>
+
+      </div>
+
+
+
+      <div class="contact-card">
+
+        <div class="icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7">
+
+            <path d="M20 11.5a8 8 0 0 1-8 8 8.3 8.3 0 0 1-3.6-.8L4 20l1.4-4.2A8 8 0 1 1 20 11.5z"/>
+
+            <path d="M8 9.5c.3 2 2.5 4.2 4.5 4.5l1.2-1.2c.2-.2.5-.3.8-.1l2 1c.3.1.4.5.3.8-.4 1.2-1.4 2-2.7 2C10.4 16.5 7.5 13.6 7.5 10c0-1.3.8-2.3 2-2.7.3-.1.7 0 .8.3l1 2c.1.3.1.6-.1.8L10 11.6"/>
+
+          </svg>
+
+        </div>
+
+
+        <h3>
+          WhatsApp: +91 95947 17171
+        </h3>
+
+
+        <p>
+
+          <a
+            href="https://wa.me/919594717171"
+            target="_blank"
+            rel="noopener">
+
+            Chat with us on WhatsApp
+
+          </a>
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="map-strip">
+
+      <div>
+
+        <strong>Timings</strong> —
+        Mon–Sun, 24 Hours
+
+      </div>
+
+
+      <div>
+
+        <strong>Address</strong> —
+        Main Street, Hiranandani Gardens, Powai,
+        Mumbai, Maharashtra 400076
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
+
   <div class="wrap">
-    <span>Shruti Properties — Powai, Mumbai 400076 · shrutiproperties.com</span>
-    <span>© 2026 Shruti Properties</span>
+
+    <div>
+      Raut Suites — Powai, Mumbai 400076
+    </div>
+
+
+    <div>
+      © 2026 Raut Suites
+    </div>
+
   </div>
+
 </footer>
 
+
+
+<!-- =========================
+     EMAILJS LIBRARY
+========================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
-  // Disable automatic browser scroll restoration on refresh
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
 
-  // Ensure view resets to top left upon unloading/reloading
-  window.addEventListener('beforeunload', () => {
-    window.scrollTo(0, 0);
-  });
 
-  function toggleMenu() {
-    const navLinks = document.getElementById('navLinks');
+/* =========================
+   PREVENT SCROLL RESTORATION
+========================= */
+
+if ('scrollRestoration' in history) {
+
+  history.scrollRestoration = 'manual';
+
+}
+
+window.addEventListener('beforeunload', () => {
+
+  window.scrollTo(0, 0);
+
+});
+
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu() {
+
+  const navLinks =
+    document.getElementById('navLinks');
+
+  if (navLinks) {
+
     navLinks.classList.toggle('active');
+
   }
 
-  function closeMenu() {
-    const navLinks = document.getElementById('navLinks');
+}
+
+
+function closeMenu() {
+
+  const navLinks =
+    document.getElementById('navLinks');
+
+  if (navLinks) {
+
     navLinks.classList.remove('active');
+
   }
+
+}
+
+
+
+/* =========================
+   GALLERY SLIDESHOW
+========================= */
+
+(function () {
+
+  const container =
+    document.getElementById('gallerySlideshow');
+
+  if (!container) {
+
+    return;
+
+  }
+
+
+  const slides =
+    container.querySelectorAll('.slide');
+
+
+  const prevBtn =
+    document.getElementById('slidePrev');
+
+
+  const nextBtn =
+    document.getElementById('slideNext');
+
+
+  let current = 0;
+
+  let timer;
+
+
+
+  function showSlide(index) {
+
+    slides[current].classList.remove('active');
+
+
+    current =
+      (index + slides.length) % slides.length;
+
+
+    slides[current].classList.add('active');
+
+  }
+
+
+
+  function startAutoplay() {
+
+    timer = setInterval(() => {
+
+      showSlide(current + 1);
+
+    }, 3000);
+
+  }
+
+
+
+  function resetAutoplay() {
+
+    clearInterval(timer);
+
+    startAutoplay();
+
+  }
+
+
+
+  if (nextBtn) {
+
+    nextBtn.addEventListener('click', () => {
+
+      showSlide(current + 1);
+
+      resetAutoplay();
+
+    });
+
+  }
+
+
+
+  if (prevBtn) {
+
+    prevBtn.addEventListener('click', () => {
+
+      showSlide(current - 1);
+
+      resetAutoplay();
+
+    });
+
+  }
+
+
+
+  startAutoplay();
+
+})();
+
+
+
+/* =========================
+   EMAILJS CONFIGURATION
+========================= */
+
+
+/*
+  Your EmailJS Public Key
+*/
+
+emailjs.init({
+
+  publicKey: 'xkVMoFMUVDpTBBeIr'
+
+});
+
+
+
+/* =========================
+   INQUIRY FORM
+========================= */
+
+const inquiryForm =
+  document.getElementById('inquiryForm');
+
+
+const formMessage =
+  document.getElementById('formMessage');
+
+
+const submitButton =
+  inquiryForm?.querySelector(
+    'button[type="submit"]'
+  );
+
+
+
+if (inquiryForm) {
+
+  inquiryForm.addEventListener(
+    'submit',
+    async function (event) {
+
+
+      /*
+        Prevent normal browser submission.
+      */
+
+      event.preventDefault();
+
+
+
+      /*
+        Clear previous message.
+      */
+
+      formMessage.className =
+        'form-message';
+
+      formMessage.textContent =
+        '';
+
+
+
+      /*
+        Disable button while sending.
+      */
+
+      submitButton.disabled = true;
+
+      submitButton.textContent =
+        'Sending...';
+
+
+
+      /*
+        Read form values.
+      */
+
+      const formData =
+        new FormData(inquiryForm);
+
+
+
+      /*
+        These names must match
+        your EmailJS template variables.
+      */
+
+      const templateParams = {
+
+        name:
+          formData.get('Name'),
+
+        phone:
+          formData.get('Phone'),
+
+        email:
+          formData.get('Email'),
+
+        preferred_visit_date:
+          formData.get('Preferred visit date') ||
+          'Not specified',
+
+        message:
+          formData.get('Message') ||
+          'No message provided'
+
+      };
+
+
+
+      try {
+
+
+        /*
+          Send inquiry through EmailJS.
+
+          Service ID:
+          service_pn2cf0a
+
+          Template ID:
+          template_zz4oqka
+        */
+
+        const response =
+          await emailjs.send(
+
+            'service_pn2cf0a',
+
+            'template_zz4oqka',
+
+            templateParams
+
+          );
+
+
+
+        console.log(
+          'Email sent successfully:',
+          response
+        );
+
+
+
+        /*
+          SUCCESS
+        */
+
+        formMessage.className =
+          'form-message success';
+
+
+        formMessage.textContent =
+          "Inquiry sent successfully. We'll get back to you shortly.";
+
+
+
+        /*
+          Reset form.
+        */
+
+        inquiryForm.reset();
+
+
+      } catch (error) {
+
+
+        /*
+          Log the actual EmailJS error
+          in the browser console.
+        */
+
+        console.error(
+          'EmailJS error:',
+          error
+        );
+
+
+
+        /*
+          ERROR
+        */
+
+        formMessage.className =
+          'form-message error';
+
+
+        formMessage.textContent =
+          'Sorry, we could not send your inquiry. Please try again or contact us directly.';
+
+
+      } finally {
+
+
+        /*
+          Enable button again.
+        */
+
+        submitButton.disabled = false;
+
+        submitButton.textContent =
+          'Send Inquiry';
+
+      }
+
+    }
+  );
+
+}
+
 </script>
+
 
 </body>
 </html>
